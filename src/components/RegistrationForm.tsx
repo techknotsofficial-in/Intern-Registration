@@ -515,9 +515,9 @@ const RegistrationForm = () => {
                 <div className="lg:hidden mt-6">
                   <button
                     type="submit"
-                    disabled={!isFormValid() || isProcessing}
+                    disabled={isProcessing}
                     className={`razorpay-btn btn-shine w-full py-4 rounded-xl text-white font-semibold text-lg flex items-center justify-center gap-2 ${
-                      !isFormValid() || isProcessing ? 'opacity-50 cursor-not-allowed' : ''
+                      isProcessing ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                   >
                     <FiCreditCard size={20} />
@@ -622,9 +622,9 @@ const RegistrationForm = () => {
                 <button
                   type="button"
                   onClick={handlePayment}
-                  disabled={!isFormValid() || isProcessing}
+                  disabled={isProcessing}
                   className={`razorpay-btn btn-shine w-full py-4 rounded-xl text-white font-semibold text-lg items-center justify-center gap-2 hidden lg:flex ${
-                    !isFormValid() || isProcessing ? 'opacity-50 cursor-not-allowed' : ''
+                    isProcessing ? 'opacity-50 cursor-not-allowed' : ''
                   }`}
                 >
                   <FiCreditCard size={20} />
